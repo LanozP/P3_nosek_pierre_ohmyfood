@@ -1,0 +1,98 @@
+.btn {
+  background-color: #f4f4f4;
+}
+.btn:hover {
+  background-color: #f4edfe;
+}
+
+.box_restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 10px 12px 14px -13px rgba(0, 0, 0, 0.75);
+}
+
+.title__box_restaurants {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.button_image {
+  width: 302px;
+  height: 228px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 10px 12px 14px -13px rgba(0, 0, 0, 0.75);
+}
+.button_image .button_image__restaurant {
+  width: 302px;
+  height: 158px;
+  border-radius: 15px 15px 0 0;
+}
+
+.button_image__label_large {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.button_image__label_2 {
+  font-size: 12px;
+}
+
+.button_image__star_logo {
+  background-color: white;
+}
+
+/*
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../Police/Shrikhand-Regular.ttf");
+}
+
+
+body{
+    width: 100%;
+}
+
+.bloc_page {
+    width: 100%;
+}
+
+.box_title {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.first_title {
+    font-family: "Shrikhand";
+    height: 40px;
+    font-size: 30px;
+}
+
+.search_box {
+    width: 100%;
+    height: 35px;
+}
+
+.icon_search {
+
+}
+
+.place_search {
+    width: 100%;
+}
+*/
+
+/*# sourceMappingURL=style.css.map */
