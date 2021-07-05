@@ -1,0 +1,39 @@
+
+
+@mixin h4 {
+    font-size: $font-size-H4;
+    padding-left: 15px;
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@mixin button_image {
+    width: 90%;
+    height: 240px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: $border-radius1;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+}
+
+@mixin form_button {
+    display: flex;
+    width: 85%;
+
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    margin-left: 35px;
+    margin-bottom: 15px;
+  
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+  
+    background-color: #f5f5f5; 
+
+    cursor: pointer;
+}

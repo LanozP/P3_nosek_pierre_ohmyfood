@@ -183,9 +183,14 @@ h4 {
   border-radius: 15px 15px 15px 15px;
 }
 .box_restaurants .title {
-  font-weight: 600;
   font-size: 25px;
   padding-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .box_restaurants .title {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .button_image {

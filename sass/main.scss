@@ -10,6 +10,7 @@ html, body {
 }
 
 @import 'variables';
+@import 'mixins';
   
 @font-face {
     font-family: "Shrikhand";
@@ -119,13 +120,7 @@ html, body {
 }
 
 h4 {
-    font-size: $font-size-H4;
-  
-    padding-left: 15px;
-    @media screen and (min-width:768px) {
-        display: flex;
-        justify-content: center;
-    }
+    @include h4;
 }
 
 .nav {
@@ -143,27 +138,11 @@ h4 {
 }
 
 .form_button {
-    display: flex;
-    width: 85%;
-  
-    padding-left: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  
-    margin-left: 35px;
-    margin-bottom: 15px;
-  
-    border-radius: 20px;
-    box-shadow: $box-shadow;
-  
-    background-color: #f5f5f5; 
-
-    cursor: pointer;
+    @include form_button;
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
     }
-    
     .number {
         font-size: 14px;
 
@@ -176,7 +155,6 @@ h4 {
         margin-left: -40px;
         margin-right: 15px; 
     }
-
     .logo{
         display: flex;
         align-items: center;
@@ -197,7 +175,6 @@ h4 {
             color: gray;
         }
     }
-
     .label{
         display: flex;
         align-items: center;
@@ -211,7 +188,6 @@ h4 {
       
         padding-left: 20px;
     } 
-
     @media screen and (min-width:768px){
         display: flex;   
 
@@ -232,22 +208,12 @@ h4 {
     align-items: center;
     border-radius: $border-radius1;
     .title {
-        font-weight: 600;
-        font-size: $font-size-H4;
-  
-        padding-left: 15px;
+        @include h4;
     }
 }
     
 .button_image {
-    width: 90%;
-    height: 240px;
-    margin-bottom: 15px;
-    background-color: white;
-    border-radius: $border-radius1;
-    box-shadow: $box-shadow;
-
-    cursor: pointer;
+    @include button_image;
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
@@ -275,17 +241,14 @@ h4 {
             font-weight: 800;
         }
     }
-    
     .logo {
         font-size: 28px;
         padding-top: 10px;
     }
-
     .label_2 {
         padding-left: $font-size-label_2    ;
         font-size: 18px;
     }
-
     @media screen and (min-width:768px){
         width: 50%;
         height: 350px;
