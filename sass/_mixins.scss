@@ -9,19 +9,19 @@
     }
 }
 
-@mixin button_image {
-    width: 90%;
-    height: 240px;
+@mixin button_image ($width,$height,$bgc,$br,$bs) {
+    width: $width;
+    height: $height;
     margin-bottom: 15px;
-    background-color: white;
-    border-radius: $border-radius1;
-    box-shadow: $box-shadow;
+    background-color: $bgc;
+    border-radius: $br;
+    box-shadow: $bs;
     cursor: pointer;
 }
 
-@mixin form_button {
+@mixin form_button ($width,$bgc,$br,$bs) {
     display: flex;
-    width: 85%;
+    width: $width;
 
     padding-left: 25px;
     padding-top: 20px;
@@ -30,10 +30,10 @@
     margin-left: 35px;
     margin-bottom: 15px;
   
-    border-radius: 20px;
-    box-shadow: $box-shadow;
+    border-radius: $br;
+    box-shadow: $bs;
   
-    background-color: #f5f5f5; 
+    background-color: $bgc;
 
     cursor: pointer;
 }

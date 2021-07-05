@@ -138,7 +138,7 @@ h4 {
 }
 
 .form_button {
-    @include form_button;
+    @include form_button (90%,white,$border-radius1,$box-shadow);
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
@@ -213,7 +213,7 @@ h4 {
 }
     
 .button_image {
-    @include button_image;
+    @include button_image (85%,240px,#f5f5f5,$border-radius1,$box-shadow);
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
