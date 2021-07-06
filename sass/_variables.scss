@@ -11,10 +11,16 @@ $font-family3: "Roboto-Black";
 $background-color1:rgb(246, 246, 246);
 $background-color-footer:rgb(53, 53, 53);
 
-$box-shadow: 1px 2px 8px 2px #c4c4c4;
+$box-shadow: 0px 2px 10px 1px #c4c4c4;
 
 $border-radius1: 15px 15px 15px 15px;
 
 $font-size-H4: 25px;
 $font-size-label_1: 20px;
 $font-size-label_2: 10px;
+
+$breakpoints:(
+    phone: 375px,
+    tablet: 768px,
+    desktop: 1024px
+);

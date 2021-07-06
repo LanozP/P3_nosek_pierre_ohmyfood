@@ -9,23 +9,13 @@
     }
 }
 
-@mixin button_image ($width,$height,$bgc,$br,$bs) {
-    width: $width;
-    height: $height;
-    margin-bottom: 15px;
-    background-color: $bgc;
-    border-radius: $br;
-    box-shadow: $bs;
-    cursor: pointer;
-}
-
 @mixin form_button ($width,$bgc,$br,$bs) {
     display: flex;
     width: $width;
 
-    padding-left: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 28px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   
     margin-left: 35px;
     margin-bottom: 15px;
@@ -36,4 +26,25 @@
     background-color: $bgc;
 
     cursor: pointer;
+    &:hover {
+        background: lighten($color: #fff, $amount: 5%);
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+
+
+@mixin button_image ($width,$height,$bgc,$br,$bs) {
+    width: $width;
+    height: $height;
+    margin-bottom: 15px;
+    background-color: $bgc;
+    border-radius: $br;
+    box-shadow: $bs;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
 }
