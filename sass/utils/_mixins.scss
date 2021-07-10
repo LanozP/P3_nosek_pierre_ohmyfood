@@ -33,8 +33,6 @@
     }
 }
 
-
-
 @mixin button_image ($width,$height,$bgc,$br,$bs) {
     width: $width;
     height: $height;
@@ -46,5 +44,32 @@
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
+    }
+}
+
+@mixin box-menu ($font-s,$padd,$br,$font-w) {
+    font-family: $font-family3;
+    font-size: $font-s;
+    border: 1px solid #FFF;
+    padding: $padd;
+    border-radius: $br;
+    box-shadow: $box-shadow;
+    margin-bottom: 15px;
+    .label_title {
+        font-weight: $font-w;
+    }
+
+    .box_option {   
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: baseline;
+        .label_option {
+            font-size: $font-size-label_4;
+        }
+            
+        .label_price {
+            font-weight: 600;
+        }
     }
 }

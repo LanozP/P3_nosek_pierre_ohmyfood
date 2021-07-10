@@ -1,0 +1,151 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import '../sass/utils/variables';
+@import '../sass/utils/mixins';
+@import '../sass/utils/media';
+  
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../Police/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../Police/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("../public/Police/Roboto-Black.ttf");
+}
+
+.box_title {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    height: 70px;
+
+    border-bottom: 1px solid #c4bcbc;
+    h1 {
+        font-family: $font-family1;
+        height: 40px;
+        font-size: 30px;
+    }
+}
+
+.image_background {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: -45px;
+}
+
+section {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: #FFF;
+    position: absolute;
+    border-radius: 40px 40px 0 0;
+    @media #{$media-up} {
+        position: relative;
+        width: 95%;
+        margin: auto;
+        padding:30px;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    .label {
+        font-family: $font-family1;
+        font-size: $font-size-H5;
+        margin-top: 0;
+        padding-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.star {
+    font-size: 24px;
+    padding-right: 22px;
+    color:rgba(116, 106, 106, 0.521);
+    cursor: pointer;
+    &:hover {
+
+    }
+}
+
+.starters {
+    margin-bottom: 45px;
+}
+
+.starter {
+    font-family: $font-family2;
+    color:rgba(22, 21, 21, 0.685);
+    padding-bottom: 4px;
+    @media #{$media-up} {
+        font-size: 20px;
+    }
+
+    .starter-border {
+        margin-top: 7px;
+        width: 50px;
+        background-color: $color-third;
+        height: 3px;
+    }
+}
+
+.box {
+    @include box-menu ($font-s: 18px,$padd: 8px,$br: 15px,$font-w: 900);
+    @media #{$media-up} {
+        margin:50px;
+    }   
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    .button_explorer {
+        height: 45px;
+
+        font-size: 14px;
+
+        margin-bottom: 50px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        border-radius: 25px;
+        box-shadow: $box-shadow;
+        border: 0px;
+
+        background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);        color: white;
+
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        @media #{$media-up} {
+            font-size: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }   
+    }
+}
