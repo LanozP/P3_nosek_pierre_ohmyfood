@@ -3,7 +3,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
+
 
 * {
     box-sizing: border-box;
@@ -28,6 +30,21 @@ html, body {
     src: url("../public/Police/Roboto-Black.ttf");
 }
 
+.bloc_page {
+    position:relative;
+    padding-bottom: 200px;
+    min-height: 100vh;
+}
+
+.head {
+    @media #{$media-up} {
+        
+    }
+}
+
+
+
+
 .box_title {
     display: flex;
     justify-content: center;
@@ -45,10 +62,19 @@ html, body {
 }
 
 .image_background {
-    position: relative;
+    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    height: 240px;
+    background-size: cover;
+    background-position: center center;
     width: 100%;
     display: block;
     margin-bottom: -45px;
+    @media #{$media-up} {
+        overflow: hidden;
+        height: 600px;
+        background-size: cover;
+        background-position: center center;
+    }
 }
 
 section {
@@ -56,14 +82,7 @@ section {
     padding-left: 18px;
     padding-right: 18px;
     background-color: #FFF;
-    position: absolute;
     border-radius: 40px 40px 0 0;
-    @media #{$media-up} {
-        position: relative;
-        width: 95%;
-        margin: auto;
-        padding:30px;
-    }
 }
 
 .title {
@@ -71,7 +90,7 @@ section {
     justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
-    .label {
+    .title__label {
         font-family: $font-family1;
         font-size: $font-size-H5;
         margin-top: 0;
@@ -80,28 +99,51 @@ section {
     }
 }
 
-.star {
-    font-size: 24px;
+.star__like {
+    color: rgb(223, 213, 213);
+    font-size: 26px;
     padding-right: 22px;
-    color:rgba(116, 106, 106, 0.521);
     cursor: pointer;
-    &:hover {
+}
 
+.star__like::before {
+    transition: color 1000ms ease-in-out;
+}
+
+.star__like:hover::before {
+    font-weight: bold;
+    color: $color-secondary;
+    cursor: pointer;
+}
+
+.star__like£.active {
+    color: $color-secondary;
+}
+
+.menu_part {
+    @media #{$media-up} {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-.starters {
+.food_box {
     margin-bottom: 45px;
+    @media #{$media-up} {
+        width: 33%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
-.starter {
+.food_label {
     font-family: $font-family2;
     color:rgba(22, 21, 21, 0.685);
     padding-bottom: 4px;
     @media #{$media-up} {
         font-size: 20px;
     }
-
     .starter-border {
         margin-top: 7px;
         width: 50px;
@@ -111,9 +153,9 @@ section {
 }
 
 .box {
-    @include box-menu ($font-s: 18px,$padd: 8px,$br: 15px,$font-w: 900);
+    @include box-menu;
     @media #{$media-up} {
-        margin:50px;
+        cursor: pointer;
     }   
 }
 
@@ -148,4 +190,43 @@ section {
             padding-right: 30px;
         }   
     }
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color-footer;
+    a {
+        color: white;
+        text-decoration: none;
+
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.footer__title {
+    font-size: 16px;
+    color: white;
+    font-family: $font-family1;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label_box {
+    display: flex;
+    flex-direction: row;
+    color: white;
+
+    padding-left: 15px;
+}
+
+#label_contact {
+    margin-bottom: 50px;
 }
