@@ -41,6 +41,10 @@
     border-radius: $br;
     box-shadow: $bs;
     cursor: pointer;
+    a {
+        text-decoration: none;
+        color: black;
+    }
     &:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;

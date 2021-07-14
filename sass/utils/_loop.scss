@@ -1,0 +1,8 @@
+
+
+$sections: "image_background";
+@for $i from 1 through 4 {
+    #image_background_#{$i} {
+        background-image: url('../../images/restaurants/'+ $i + '.jpg');
+    }
+}

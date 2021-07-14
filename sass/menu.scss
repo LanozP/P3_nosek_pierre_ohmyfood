@@ -14,6 +14,7 @@ html, body {
 @import '../sass/utils/variables';
 @import '../sass/utils/mixins';
 @import '../sass/utils/media';
+@import '../sass/utils/loop';
   
 @font-face {
     font-family: "Shrikhand";
@@ -36,14 +37,20 @@ html, body {
     min-height: 100vh;
 }
 
-.head {
-    @media #{$media-up} {
-        
+.header__top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a {
+        position: absolute;
+        left:20px;
+        font-size: 20px;
+        padding-top: 25px;
+        cursor: pointer;
+        color: black;
     }
 }
-
-
-
 
 .box_title {
     display: flex;
@@ -62,7 +69,6 @@ html, body {
 }
 
 .image_background {
-    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     height: 240px;
     background-size: cover;
     background-position: center center;
@@ -90,6 +96,9 @@ section {
     justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
+    @media #{$media-up} {
+        justify-content: center;
+    }
     .title__label {
         font-family: $font-family1;
         font-size: $font-size-H5;
@@ -100,10 +109,13 @@ section {
 }
 
 .star__like {
-    color: rgb(223, 213, 213);
     font-size: 26px;
     padding-right: 22px;
     cursor: pointer;
+    @media #{$media-up} {
+        padding-left: 20px;
+    }
+
 }
 
 .star__like::before {
@@ -116,7 +128,7 @@ section {
     cursor: pointer;
 }
 
-.star__like£.active {
+.star__like.active {
     color: $color-secondary;
 }
 

@@ -236,7 +236,30 @@ h4 {
     .logo {
         font-size: 28px;
         padding-top: 10px;
+        .star__like {
+            font-size: 26px;
+            padding-right: 22px;
+            cursor: pointer;
+            @media #{$media-up} {
+                padding-left: 20px;
+            }
+        }
+    
+        .star__like::before {
+            transition: color 1000ms ease-in-out;
+        }
+        
+        .star__like:hover::before {
+            font-weight: bold;
+            color: $color-secondary;
+            cursor: pointer;
+        }
+        
+        .star__like.active {
+            color: $color-secondary;
+        }
     }
+
     .label_2 {
         padding-left: $font-size-label_2    ;
         font-size: 18px;
