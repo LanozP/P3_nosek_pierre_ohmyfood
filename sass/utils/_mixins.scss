@@ -28,8 +28,6 @@
     cursor: pointer;
     &:hover {
         background: lighten($color: #fff, $amount: 5%);
-        transform: scale(1.05);
-        transition: transform 0.2s ease-in-out;
     }
 }
 
