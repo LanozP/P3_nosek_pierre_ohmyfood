@@ -12,6 +12,7 @@ html, body {
 @import '../sass/utils/variables';
 @import '../sass/utils/mixins';
 @import '../sass/utils/media';
+
   
 @font-face {
     font-family: "Shrikhand";
@@ -25,9 +26,13 @@ html, body {
 
 @font-face {
     font-family: "Roboto-Black";
-    src: url("../public/Police/Roboto-Black.ttf");
+    src: url("../Police/Roboto-Black.ttf");
 }
-  
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../Police/Roboto-Light.ttf");
+}
   
 .box_title {
     display: flex;
@@ -57,10 +62,10 @@ html, body {
 
     width: 100%;
     height: 45px;
-    .icon_search {
+    .search_box__icon {
         margin-right: 10px;
     }
-    .place_search {
+    .search_box__place_search {
         width: 125px;
         
         font-size: 16px;
@@ -68,6 +73,7 @@ html, body {
         background-color: #eaeaea;
         
         border: transparent;
+        outline: none;
     }
 }
 
@@ -78,45 +84,51 @@ html, body {
     align-items: center;
     text-align: center;
 
-    font-family: $font-family3;
-
     background-color: rgb(246, 246, 246);
 
     padding-top: 15px;
     padding-bottom: 50px;
     h2 {
+        font-family: $font-family3;
         margin-bottom: 2px;
 
         padding-left: 60px;
         padding-right: 60px;
     }
     h3 {
+        font-family: $font-family4;
         font-weight: lighter;
-        margin-top: 5px;
+        margin-top: 8px;
 
-        padding-left: 30px;
-        padding-right: 30px;        
+        padding-left: 28px;
+        padding-right: 28px;        
     }
+}
 
-    .button_explorer {
-        height: 45px;
-    
-        font-size: 14px;
-    
-        padding-left: 20px;
-        padding-right: 20px;
-    
-        border-radius: 25px;
-        box-shadow: $box-shadow;
-        border: 0px;
-    
-        background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);        color: white;
+.h2_h3__button_explorer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: $font-family2;
 
-        cursor: pointer;
-        &:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s ease-in-out;
-        }
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 25px;
+    box-shadow: $box-shadow;
+    border: 0px;
+
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);        color: white;
+    transform: scale(1);
+
+    cursor: pointer;
+    &:hover {
+        box-shadow: $box-shadow-plus;
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
 }
 
@@ -125,6 +137,7 @@ h4 {
 }
 
 .nav {
+    margin-bottom: 60px;
     @media screen and (min-width:768px){
         display: flex;
         align-items: center;
@@ -141,7 +154,7 @@ h4 {
 .form_button {
     @include form_button ($width: 82%,$bgc: rgb(246,246,246),$br: $border-radius1, $bs: $box-shadow);
 
-    .number {
+    .form_button__number {
         font-size: 14px;
 
         background-color: $color-primary;
@@ -153,7 +166,8 @@ h4 {
         margin-left: -40px;
         margin-right: 15px; 
     }
-    .logo{
+
+    .form_button__logo{
         display: flex;
         align-items: center;
         
@@ -169,11 +183,12 @@ h4 {
         border: transparent ;
         
         padding-left: 20px;
-        i{
+        i {
             color: gray;
         }
     }
-    .label{
+
+    .form_button__label{
         display: flex;
         align-items: center;
       
@@ -192,82 +207,91 @@ h4 {
     }
 }
 
+/* BOX RESTAURANTS */
+
 .box {
     background-color: $background-color1;
     padding-top: 10px;
 }
 
 
-.box_restaurants {
+.box__restaurants {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: $border-radius1;
-    .title {
+    padding-bottom: 50px;
+    .box__title {
         @include h4;
     }
 }
     
-.button_image {
-    @include button_image ($width: 85%,$height: 240px,$bgc:#f5f5f5,$br: $border-radius1,$bs: $box-shadow);
-    .restaurant {
+.btn_image {
+    @include btn_image ($width: 85%,$height: 240px,$bgc:#f5f5f5,$br: $border-radius1,$bs: $box-shadow);
+    .btn_image__restaurant {
         width: 100%;
         height: 158px;
 
         border-radius: 15px 15px 0 0;
 
         object-fit: cover;
+        
+        cursor: pointer;
         @media #{$media-down} {
             width: 100%;
             height: 70%;
         }
     }
     
-    .label{
-        display: flex;
-        justify-content: space-between;
+    .btn_image__label {
         padding-left: 10px;
         padding-right: 15px;
-        .label_1 {
+        padding-top: 10px;
+        .btn_image__label_1 {
+            font-family: $font-family3;
             font-size: $font-size-label_1;
             font-weight: 800;
+            @media #{$media-up} {
+                font-size: 22px;
+                padding-top: 15px;
+            }
         }
     }
-    .logo {
+
+    .btn_image__logo {
+        position: absolute;
+        right: 10px;
+        bottom: 22px;
         font-size: 28px;
-        padding-top: 10px;
-        .star__like {
-            font-size: 26px;
+        .btn_image__star {
+            color: rgb(102, 102, 102);
+            font-size: 24px;
             padding-right: 22px;
             cursor: pointer;
             @media #{$media-up} {
+                position: absolute;
+                right: 10px;
+                bottom: 22px;
                 padding-left: 20px;
             }
         }
-    
-        .star__like::before {
-            transition: color 1000ms ease-in-out;
-        }
-        
-        .star__like:hover::before {
-            font-weight: bold;
-            color: $color-secondary;
-            cursor: pointer;
-        }
-        
-        .star__like.active {
-            color: $color-secondary;
+        @include btn_image__star;
+    }
+
+    .btn_image__label_2 {
+        padding-top: 4px;
+        font-family: $font-family2;
+        color: gray;
+        font-size: 15px;
+        @media #{$media-up} {
+            font-size: 18px;
+            padding-top: 10px;
         }
     }
 
-    .label_2 {
-        padding-left: $font-size-label_2    ;
-        font-size: 18px;
-    }
     @media #{$media-up} {
         width: 50%;
         height: 350px;
-
         margin-bottom: 40px;
     }
 }
@@ -293,7 +317,7 @@ h5 {
     padding-left: 20px;
 }
 
-.label_box {
+.footer__label_box {
     display: flex;
     flex-direction: row;
     color: white;

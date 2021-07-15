@@ -1,8 +1,10 @@
 
 
 @mixin h4 {
+    font-family: $font-family3;
     font-size: $font-size-H4;
     padding-left: 15px;
+    margin-top: 50px;
     @media screen and (min-width:768px) {
         display: flex;
         justify-content: center;
@@ -12,6 +14,7 @@
 @mixin form_button ($width,$bgc,$br,$bs) {
     display: flex;
     width: $width;
+    font-family: $font-family2;
 
     padding-left: 28px;
     padding-top: 18px;
@@ -27,27 +30,48 @@
 
     cursor: pointer;
     &:hover {
-        background: lighten($color: #fff, $amount: 5%);
+        box-shadow: $box-shadow-plus;
+        background-color: rgba(244, 235, 254);
     }
 }
 
-@mixin button_image ($width,$height,$bgc,$br,$bs) {
+@mixin btn_image ($width,$height,$bgc,$br,$bs) {
     width: $width;
     height: $height;
     margin-bottom: 15px;
     background-color: $bgc;
     border-radius: $br;
     box-shadow: $bs;
-    cursor: pointer;
+    transform: scale(1);
     a {
         text-decoration: none;
         color: black;
     }
     &:hover {
-        transform: scale(1.05);
-        transition: transform 0.2s ease-in-out;
+        box-shadow: $box-shadow-plus;
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
     }
 }
+
+@mixin btn_image__star {
+    padding-left: 15px;
+    font-size: 25px;
+    .btn_image__star::before {
+        cursor: pointer;
+    }
+
+    .btn_image__star:hover::before {
+        font-weight: bold;
+        color: $color-secondary;
+        transition: 300ms linear;
+    }
+
+    .btn_image__star.active {
+        color: $color-secondary;
+    }
+}
+
 
 @mixin box-menu {
     position: relative;
@@ -58,7 +82,7 @@
     margin-bottom: 15px;
 }
 
-.box_a {
+.small_box__a {
     position: absolute;
     z-index: 2;
     background-color: #FFF;
@@ -70,18 +94,21 @@
     padding: 8px;
     margin-bottom: 15px;
     transition: width 0.4s ease-in-out;
-        .label_title {
+        .small_box__title {
             font-weight: 900;
         }
-        .box_option {   
+        .small_box__option {   
             display: flex;
             justify-content: space-between;
             flex-direction: row;
             align-items: baseline;
-            .label_option {
+            .small_box__label {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 font-size: $font-size-label_4;
             }   
-            .label_price {
+            .small_box__price {
                 padding-right: 10px;
                 font-size: 15px;
                 font-weight: bold;
@@ -89,7 +116,7 @@
         }
 }
 
-.box_b {
+.small_box__b {
     z-index: 1;
     position: absolute;
     right: -15%;
@@ -108,10 +135,11 @@
         color: #FFF;
     }
 }
-.box:hover .box_a {
+
+.small_box:hover .small_box__a {
     width: 85%;
 }
 
-.box:hover .box_b {
+.small_box:hover .small_box__b {
     right: 0;
 }
