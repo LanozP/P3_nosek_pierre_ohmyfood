@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -11,17 +12,18 @@ html, body {
 .small_box__a {
   position: absolute;
   z-index: 2;
-  background-color: #FFF;
+  background-color: #fff;
   width: 100%;
   height: 60px;
   font-family: "Roboto-Black";
   font-size: 18px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   padding: 8px;
   margin-bottom: 15px;
   transition: width 0.4s ease-in-out;
 }
 .small_box__a .small_box__title {
+  font-family: "Roboto-Black";
   font-weight: 900;
 }
 .small_box__a .small_box__option {
@@ -49,17 +51,17 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 15%;
   height: 60px;
   font-size: 20px;
-  border: 1px solid #99E2D0;
+  border: 1px solid #99e2d0;
   padding: 5px;
   border-radius: 0px 15px 15px 0px;
   transition: right 0.4s ease-in-out;
 }
 .small_box__b i {
-  color: #FFF;
+  color: #fff;
 }
 
 .small_box:hover .small_box__a {
@@ -86,6 +88,84 @@ html, body {
   background-image: url("../../images/restaurants/4.jpg");
 }
 
+.small_box-1 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-2 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-3 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-4 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 1600ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-5 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-6 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2400ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-7 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2800ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-8 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 3200ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-9 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 3600ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-10 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 4000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("../Police/Shrikhand-Regular.ttf");
@@ -96,8 +176,17 @@ html, body {
 }
 @font-face {
   font-family: "Roboto-Black";
-  src: url("../public/Police/Roboto-Black.ttf");
+  src: url("../Police/Roboto-Black.ttf");
 }
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../Police/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../public/Police/Roboto-Bold.ttf");
+}
+/* HEADER */
 .bloc_page {
   position: relative;
   padding-bottom: 200px;
@@ -150,11 +239,12 @@ html, body {
   }
 }
 
+/* BLOC WITH ALL THE MENU */
 .menu {
   width: 100%;
   padding-left: 18px;
   padding-right: 18px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 40px 40px 0 0;
 }
 
@@ -185,11 +275,11 @@ html, body {
 }
 .menu__title .menu__star .btn_image__star:hover::before {
   font-weight: bold;
-  color: #FF79DA;
+  color: #ff79da;
   transition: 300ms linear;
 }
 .menu__title .menu__star .btn_image__star.active {
-  color: #FF79DA;
+  color: #ff79da;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -211,23 +301,25 @@ html, body {
   }
 }
 
-.menu_part__food_label {
+.menu_part__label {
   font-family: "Roboto";
   color: rgba(22, 21, 21, 0.685);
   padding-bottom: 4px;
 }
 @media only screen and (min-width: 1024px) {
-  .menu_part__food_label {
+  .menu_part__label {
     font-size: 20px;
   }
 }
-.menu_part__food_label .menu_part__border {
+
+.menu_part__border {
   margin-top: 7px;
   width: 50px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   height: 3px;
 }
 
+/* BLOC WITH DETAILS MENU */
 .small_box {
   position: relative;
   height: 60px;
@@ -271,6 +363,7 @@ html, body {
   }
 }
 
+/* FOOTER */
 .footer {
   position: absolute;
   bottom: 0;

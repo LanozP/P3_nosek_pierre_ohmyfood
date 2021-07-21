@@ -1,328 +1,370 @@
-
-
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@import '../sass/utils/variables';
-@import '../sass/utils/mixins';
-@import '../sass/utils/media';
-
-  
-@font-face {
-    font-family: "Shrikhand";
-    src: url("../Police/Shrikhand-Regular.ttf");
-}
+@import "../sass/utils/variables";
+@import "../sass/utils/mixins";
+@import "../sass/utils/media";
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../Police/Roboto-Regular.ttf");
+  font-family: "Shrikhand";
+  src: url("../Police/Shrikhand-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Roboto-Black";
-    src: url("../Police/Roboto-Black.ttf");
+  font-family: "Roboto";
+  src: url("../Police/Roboto-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Roboto-Light";
-    src: url("../Police/Roboto-Light.ttf");
+  font-family: "Roboto-Black";
+  src: url("../Police/Roboto-Black.ttf");
 }
-  
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../Police/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../public/Police/Roboto-Bold.ttf");
+}
+
+/* HEADER */
+
 .box_title {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 
-    height: 70px;
+  height: 70px;
 
-    border-bottom: 1px solid #c4bcbc;
-    h1 {
-        font-family: $font-family1;
-        height: 40px;
-        font-size: 30px;
-    }
+  border-bottom: 1px solid #c4bcbc;
+  h1 {
+    font-family: $font-family1;
+    height: 40px;
+    font-size: 30px;
+  }
 }
+
+/* PLACE SEARCH BOX */
 
 .search_box {
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eaeaea;
+
+  width: 100%;
+  height: 45px;
+  .search_box__icon {
+    margin-right: 10px;
+  }
+  .search_box__place_search {
+    width: 125px;
+
     font-size: 16px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+    font-weight: 900;
     background-color: #eaeaea;
 
-    width: 100%;
-    height: 45px;
-    .search_box__icon {
-        margin-right: 10px;
-    }
-    .search_box__place_search {
-        width: 125px;
-        
-        font-size: 16px;
-        font-weight: 900;
-        background-color: #eaeaea;
-        
-        border: transparent;
-        outline: none;
-    }
+    border: transparent;
+    outline: none;
+  }
 }
 
+/* TITLE + BTN EXPLORER */
 
 .h2_h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    background-color: rgb(246, 246, 246);
+  background-color: rgb(246, 246, 246);
 
-    padding-top: 15px;
-    padding-bottom: 50px;
-    h2 {
-        font-family: $font-family3;
-        margin-bottom: 2px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  h2 {
+    font-family: $font-family3;
+    margin-bottom: 2px;
 
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    h3 {
-        font-family: $font-family4;
-        font-weight: lighter;
-        margin-top: 8px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  h3 {
+    font-family: $font-family4;
+    font-weight: lighter;
+    margin-top: 8px;
 
-        padding-left: 28px;
-        padding-right: 28px;        
-    }
+    padding-left: 28px;
+    padding-right: 28px;
+  }
 }
 
 .h2_h3__button_explorer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: $font-family2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: $font-family2;
 
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    border-radius: 25px;
-    box-shadow: $box-shadow;
-    border: 0px;
+  border-radius: 25px;
+  box-shadow: $box-shadow;
+  border: 0px;
 
-    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);        color: white;
-    transform: scale(1);
+  background-image: linear-gradient(
+    to top,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  color: white;
+  transform: scale(1);
 
-    cursor: pointer;
-    &:hover {
-        box-shadow: $box-shadow-plus;
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out;
-    }
+  cursor: pointer;
+  &:hover {
+    box-shadow: $box-shadow-plus;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 h4 {
-    @include h4;
+  @include h4;
 }
 
+/* NAVIGATION */
+
 .nav {
-    margin-bottom: 60px;
-    @media screen and (min-width:768px){
-        display: flex;
-        align-items: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
 
-        padding-right: 25px;
+    padding-right: 25px;
 
-        margin-bottom: 20px;
+    margin-bottom: 20px;
 
-        width: 100%;
-        height: 70%;
-    }
+    width: 100%;
+    height: 70%;
+  }
 }
 
 .form_button {
-    @include form_button ($width: 82%,$bgc: rgb(246,246,246),$br: $border-radius1, $bs: $box-shadow);
+  @include form_button(
+    $width: 82%,
+    $bgc: rgb(246, 246, 246),
+    $br: $border-radius1,
+    $bs: $box-shadow
+  );
 
-    .form_button__number {
-        font-size: 14px;
+  .form_button__number {
+    font-size: 14px;
 
-        background-color: $color-primary;
-        color: white;
-        
-        border-radius: 75%;
-        
-        padding: 5px 9px;
-        margin-left: -40px;
-        margin-right: 15px; 
+    background-color: $color-primary;
+    color: white;
+
+    border-radius: 75%;
+
+    padding: 5px 9px;
+    margin-left: -40px;
+    margin-right: 15px;
+  }
+
+  .form_button__logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+
+    padding-left: 8px;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    background: transparent;
+
+    border: transparent;
+
+    padding-left: 20px;
+    i {
+      color: gray;
     }
+  }
 
-    .form_button__logo{
-        display: flex;
-        align-items: center;
-        
-        font-size: 20px;
-        
-        padding-left: 8px;
-        
-        font-size: 16px;
-        font-weight: 800;
-        
-        background: transparent;
-        
-        border: transparent ;
-        
-        padding-left: 20px;
-        i {
-            color: gray;
-        }
-    }
+  .form_button__label {
+    display: flex;
+    align-items: center;
 
-    .form_button__label{
-        display: flex;
-        align-items: center;
-      
-        font-size: 15px;
-        font-weight: 800;
-      
-        background: transparent;
-      
-        border: transparent ;
-      
-        padding-left: 20px;
-    } 
-    @media #{$media-down} {
-        display: flex;
-        height: 70%;
-    }
+    font-size: 15px;
+    font-weight: 800;
+
+    background: transparent;
+
+    border: transparent;
+
+    padding-left: 20px;
+  }
+  @media #{$media-down} {
+    display: flex;
+    height: 70%;
+  }
 }
 
 /* BOX RESTAURANTS */
 
 .box {
-    background-color: $background-color1;
-    padding-top: 10px;
+  background-color: $background-color1;
+  padding-top: 10px;
 }
 
-
 .box__restaurants {
+  justify-content: center;
+  border-radius: $border-radius1;
+  padding-bottom: 50px;
+  @media #{$media-up} {
+    display: flex;
+    flex-direction: row;
+  }
+  .box__title {
+    @include h4;
+  }
+}
+
+.line_1,
+.line_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media #{$media-up} {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: $border-radius1;
-    padding-bottom: 50px;
-    .box__title {
-        @include h4;
-    }
+  }
 }
-    
+
 .btn_image {
-    @include btn_image ($width: 85%,$height: 240px,$bgc:#f5f5f5,$br: $border-radius1,$bs: $box-shadow);
-    .btn_image__restaurant {
-        width: 100%;
-        height: 158px;
+  @include btn_image(
+    $width: 85%,
+    $height: 240px,
+    $bgc: #f5f5f5,
+    $br: $border-radius1,
+    $bs: $box-shadow
+  );
+  .btn_image__restaurant {
+    width: 100%;
+    height: 158px;
 
-        border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
 
-        object-fit: cover;
-        
-        cursor: pointer;
-        @media #{$media-down} {
-            width: 100%;
-            height: 70%;
-        }
+    object-fit: cover;
+
+    cursor: pointer;
+    @media #{$media-down} {
+      width: 100%;
+      height: 70%;
     }
-    
-    .btn_image__label {
-        padding-left: 10px;
-        padding-right: 15px;
-        padding-top: 10px;
-        .btn_image__label_1 {
-            font-family: $font-family3;
-            font-size: $font-size-label_1;
-            font-weight: 800;
-            @media #{$media-up} {
-                font-size: 22px;
-                padding-top: 15px;
-            }
-        }
-    }
+  }
 
-    .btn_image__logo {
+  .btn_image__label {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    .btn_image__label_1 {
+      font-family: $font-family3;
+      font-size: $font-size-label_1;
+      font-weight: 800;
+      @media #{$media-up} {
+        font-size: 22px;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .btn_image__logo {
+    position: absolute;
+    right: 10px;
+    bottom: 22px;
+    font-size: 28px;
+    .btn_image__star {
+      color: rgb(102, 102, 102);
+      font-size: 24px;
+      padding-right: 22px;
+      cursor: pointer;
+      @media #{$media-up} {
         position: absolute;
         right: 10px;
         bottom: 22px;
-        font-size: 28px;
-        .btn_image__star {
-            color: rgb(102, 102, 102);
-            font-size: 24px;
-            padding-right: 22px;
-            cursor: pointer;
-            @media #{$media-up} {
-                position: absolute;
-                right: 10px;
-                bottom: 22px;
-                padding-left: 20px;
-            }
-        }
-        @include btn_image__star;
+        padding-left: 20px;
+      }
     }
+    @include btn_image__star;
+  }
 
-    .btn_image__label_2 {
-        padding-top: 4px;
-        font-family: $font-family2;
-        color: gray;
-        font-size: 15px;
-        @media #{$media-up} {
-            font-size: 18px;
-            padding-top: 10px;
-        }
-    }
-
+  .btn_image__label_2 {
+    padding-top: 4px;
+    font-family: $font-family2;
+    color: gray;
+    font-size: 15px;
     @media #{$media-up} {
-        width: 50%;
-        height: 350px;
-        margin-bottom: 40px;
+      font-size: 18px;
+      padding-top: 10px;
     }
+  }
+
+  @media #{$media-up} {
+    height: 350px;
+    margin-bottom: 40px;
+  }
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    background-color: $background-color-footer;
-    a {
-        color: white;
-        text-decoration: none;
+/* FOOTER */
 
-        margin-left: 10px;
-        margin-bottom: 10px;
-    }
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color-footer;
+  a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 h5 {
-    font-size: 20px;
-    color: white;
-    font-family: $font-family1;
+  font-size: 20px;
+  color: white;
+  font-family: $font-family1;
 
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .footer__label_box {
-    display: flex;
-    flex-direction: row;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  color: white;
 
-    padding-left: 15px;
+  padding-left: 15px;
 }
-
-

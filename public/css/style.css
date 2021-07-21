@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -10,17 +11,18 @@ html, body {
 .small_box__a {
   position: absolute;
   z-index: 2;
-  background-color: #FFF;
+  background-color: #fff;
   width: 100%;
   height: 60px;
   font-family: "Roboto-Black";
   font-size: 18px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   padding: 8px;
   margin-bottom: 15px;
   transition: width 0.4s ease-in-out;
 }
 .small_box__a .small_box__title {
+  font-family: "Roboto-Black";
   font-weight: 900;
 }
 .small_box__a .small_box__option {
@@ -48,17 +50,17 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 15%;
   height: 60px;
   font-size: 20px;
-  border: 1px solid #99E2D0;
+  border: 1px solid #99e2d0;
   padding: 5px;
   border-radius: 0px 15px 15px 0px;
   transition: right 0.4s ease-in-out;
 }
 .small_box__b i {
-  color: #FFF;
+  color: #fff;
 }
 
 .small_box:hover .small_box__a {
@@ -85,6 +87,11 @@ html, body {
   font-family: "Roboto-Light";
   src: url("../Police/Roboto-Light.ttf");
 }
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../public/Police/Roboto-Bold.ttf");
+}
+/* HEADER */
 .box_title {
   display: flex;
   justify-content: center;
@@ -99,6 +106,7 @@ html, body {
   font-size: 30px;
 }
 
+/* PLACE SEARCH BOX */
 .search_box {
   font-size: 16px;
   display: flex;
@@ -121,6 +129,7 @@ html, body {
   outline: none;
 }
 
+/* TITLE + BTN EXPLORER */
 .h2_h3 {
   display: flex;
   flex-direction: column;
@@ -178,9 +187,11 @@ h4 {
   h4 {
     display: flex;
     justify-content: center;
+    font-size: 26px;
   }
 }
 
+/* NAVIGATION */
 .nav {
   margin-bottom: 60px;
 }
@@ -215,7 +226,7 @@ h4 {
 }
 .form_button .form_button__number {
   font-size: 14px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   border-radius: 75%;
   padding: 5px 9px;
@@ -259,11 +270,15 @@ h4 {
 }
 
 .box__restaurants {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   border-radius: 15px 15px 15px 15px;
   padding-bottom: 50px;
+}
+@media only screen and (min-width: 1024px) {
+  .box__restaurants {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .box__restaurants .box__title {
   font-family: "Roboto-Black";
@@ -275,6 +290,23 @@ h4 {
   .box__restaurants .box__title {
     display: flex;
     justify-content: center;
+    font-size: 26px;
+  }
+}
+
+.line_1,
+.line_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1024px) {
+  .line_1,
+.line_2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -352,11 +384,11 @@ h4 {
 }
 .btn_image .btn_image__logo .btn_image__star:hover::before {
   font-weight: bold;
-  color: #FF79DA;
+  color: #ff79da;
   transition: 300ms linear;
 }
 .btn_image .btn_image__logo .btn_image__star.active {
-  color: #FF79DA;
+  color: #ff79da;
 }
 .btn_image .btn_image__label_2 {
   padding-top: 4px;
@@ -372,12 +404,12 @@ h4 {
 }
 @media only screen and (min-width: 1024px) {
   .btn_image {
-    width: 50%;
     height: 350px;
     margin-bottom: 40px;
   }
 }
 
+/* FOOTER */
 .footer {
   display: flex;
   flex-direction: column;
