@@ -8,6 +8,12 @@ body {
   box-sizing: border-box;
 }
 
+.gradient_text {
+  background-image: linear-gradient(to top, #8b46df, #7b16aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .small_box__a {
   position: absolute;
   z-index: 2;
@@ -71,6 +77,119 @@ body {
   right: 0;
 }
 
+#image_background_1 {
+  background-image: url("../../images/restaurants/1.jpg");
+}
+
+#image_background_2 {
+  background-image: url("../../images/restaurants/2.jpg");
+}
+
+#image_background_3 {
+  background-image: url("../../images/restaurants/3.jpg");
+}
+
+#image_background_4 {
+  background-image: url("../../images/restaurants/4.jpg");
+}
+
+.small_box-1 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-2 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-3 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-4 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 1600ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-5 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-6 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2400ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-7 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 2800ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-8 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 3200ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-9 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 3600ms;
+  animation-fill-mode: forwards;
+}
+
+.small_box-10 {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 4000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("../Police/Shrikhand-Regular.ttf");
@@ -91,6 +210,52 @@ body {
   font-family: "Roboto-Bold";
   src: url("../public/Police/Roboto-Bold.ttf");
 }
+/* LOADER */
+.loader {
+  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  font-family: Shrikhand, sans-serif;
+  font-size: x-large;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: loading 500ms ease-in-out 1000ms forwards;
+}
+.loader .loader__title {
+  justify-content: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  .loader .loader__title {
+    top: 40%;
+    left: 38%;
+  }
+}
+.loader .loader__fork {
+  margin-top: 20px;
+  font-size: 50px;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  animation: rotate 2s linear infinite;
+}
+@media only screen and (min-width: 1024px) {
+  .loader .loader__fork {
+    top: 50%;
+    left: 47%;
+  }
+}
+
 /* HEADER */
 .box_title {
   display: flex;

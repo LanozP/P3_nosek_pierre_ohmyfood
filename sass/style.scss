@@ -11,6 +11,7 @@ body {
 @import "../sass/utils/variables";
 @import "../sass/utils/mixins";
 @import "../sass/utils/media";
+@import "../sass/utils/loop";
 
 @font-face {
   font-family: "Shrikhand";
@@ -35,6 +36,12 @@ body {
 @font-face {
   font-family: "Roboto-Bold";
   src: url("../public/Police/Roboto-Bold.ttf");
+}
+
+/* LOADER */
+
+.loader {
+  @include loading;
 }
 
 /* HEADER */
