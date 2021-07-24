@@ -12,26 +12,21 @@
   font-size: 22px;
   position: fixed;
   z-index: 9999;
-  animation: loading 500ms ease-in-out 1000ms forwards;
+  animation: loading 600ms ease-in-out 1000ms forwards;
+  pointer-events: none;
   .loader__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .loader__title {
-      font-size: 40px;
+      font-size: 50px;
+      animation: rotate 2s linear infinite;
       @media #{$media-up} {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 50px;
-      }
-    }
-    .loader__fork {
-      font-size: 38px;
-      animation: rotate 2s linear infinite;
-      @media #{$media-up} {
-        font-size: 50px;
+        font-size: 100px;
       }
     }
   }
