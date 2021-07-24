@@ -12,7 +12,7 @@
   font-size: 22px;
   position: fixed;
   z-index: 9999;
-  animation: loading 5000000ms ease-in-out 1000ms forwards;
+  animation: loading 500ms ease-in-out 1000ms forwards;
   .loader__box {
     display: flex;
     flex-direction: column;
