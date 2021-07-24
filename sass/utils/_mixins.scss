@@ -124,10 +124,13 @@
 @mixin small_box {
   position: relative;
   height: 60px;
-  box-shadow: 0px 2px 10px 1px #c4c4c4;
+  box-shadow: $box-shadow;
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 15px;
+  &:hover {
+    box-shadow: $box-shadow-plus;
+  }
 }
 
 .small_box__a {

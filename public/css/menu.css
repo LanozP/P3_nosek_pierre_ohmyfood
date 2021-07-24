@@ -401,6 +401,9 @@ body {
   overflow: hidden;
   margin-bottom: 15px;
 }
+.small_box:hover {
+  box-shadow: 3px 7px 6px 0px #c4c4c4;
+}
 @media only screen and (min-width: 1024px) {
   .small_box {
     cursor: pointer;
@@ -427,6 +430,7 @@ body {
 .order .order__btn:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
+  box-shadow: 3px 7px 6px 0px #c4c4c4;
 }
 @media only screen and (min-width: 1024px) {
   .order .order__btn {
@@ -453,24 +457,63 @@ body {
   margin-bottom: 10px;
 }
 
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
 .footer__title {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   font-family: "Shrikhand";
   padding-left: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 1024px) {
+  .footer__title {
+    font-size: 24px;
+  }
+}
 
 .label_box {
   display: flex;
   flex-direction: row;
   color: white;
+  font-size: 13px;
+  font-family: "Roboto";
   padding-left: 15px;
+}
+.label_box i {
+  width: 5%;
+}
+.label_box .hand {
+  font-size: 14px;
+}
+@media only screen and (min-width: 1024px) {
+  .label_box {
+    font-size: 16px;
+  }
+  .label_box i {
+    width: 1%;
+  }
+}
+
+.link {
+  font-size: 12px;
+  font-family: "Roboto";
+}
+@media only screen and (min-width: 1024px) {
+  .link {
+    font-size: 15px;
+  }
 }
 
 #label_contact {
+  font-family: "Roboto";
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=menu.css.map */
