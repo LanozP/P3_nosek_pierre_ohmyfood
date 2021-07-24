@@ -272,78 +272,9 @@ h4 {
 }
 
 .btn_image {
-  @include btn_image(
-    $width: 85%,
-    $height: 240px,
-    $bgc: #f5f5f5,
-    $br: $border-radius1,
-    $bs: $box-shadow
-  );
-  .btn_image__restaurant {
-    width: 100%;
-    height: 158px;
+  @include btn_image( $width: 85%, $height: 240px, $bgc: #f5f5f5, $br: $border-radius1, $bs: $box-shadow);
+  @include btn_image__star;
 
-    border-radius: 15px 15px 0 0;
-
-    object-fit: cover;
-
-    cursor: pointer;
-    @media #{$media-down} {
-      width: 100%;
-      height: 70%;
-    }
-  }
-
-  .btn_image__label {
-    padding-left: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    .btn_image__label_1 {
-      font-family: $font-family3;
-      font-size: $font-size-label_1;
-      font-weight: 800;
-      @media #{$media-up} {
-        font-size: 22px;
-        padding-top: 15px;
-      }
-    }
-  }
-
-  .btn_image__logo {
-    position: absolute;
-    right: 10px;
-    bottom: 22px;
-    font-size: 28px;
-    .btn_image__star {
-      color: rgb(102, 102, 102);
-      font-size: 24px;
-      padding-right: 22px;
-      cursor: pointer;
-      @media #{$media-up} {
-        position: absolute;
-        right: 10px;
-        bottom: 22px;
-        padding-left: 20px;
-      }
-    }
-    @include btn_image__star;
-  }
-
-  .btn_image__label_2 {
-    padding-top: 4px;
-    font-family: $font-family2;
-    color: gray;
-    font-size: 15px;
-    @media #{$media-up} {
-      font-size: 18px;
-      padding-top: 10px;
-    }
-  }
-
-  @media #{$media-up} {
-    height: 350px;
-    margin-bottom: 40px;
-  }
 }
 
 /* FOOTER */

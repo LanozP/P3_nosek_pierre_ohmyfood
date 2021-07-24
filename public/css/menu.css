@@ -9,12 +9,18 @@ body {
   box-sizing: border-box;
 }
 
+/* LOADER */
 .gradient_text {
   background-image: linear-gradient(to top, #8b46df, #7b16aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* TITLE H4 */
+/* FORM BUTTON */
+/* BTN IMAGE */
+/* BTN IMAGE STAR */
+/* SMALL BOX */
 .small_box__a {
   position: absolute;
   z-index: 2;
@@ -80,6 +86,7 @@ body {
   right: 0;
 }
 
+/* FOOTER */
 #image_background_1 {
   background-image: url("../../images/restaurants/1.jpg");
 }
@@ -328,7 +335,6 @@ body {
   margin-bottom: 15px;
 }
 .menu__title .menu__star {
-  padding-left: 15px;
   font-size: 25px;
 }
 .menu__title .menu__star .btn_image__star::before {
@@ -447,7 +453,6 @@ body {
 @media only screen and (min-width: 1024px) {
   .footer {
     height: auto;
-    margin-top: 100px;
   }
 }
 .footer .footer__box {

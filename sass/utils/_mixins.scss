@@ -1,11 +1,18 @@
 
+/* LOADER */
 
-  
 @mixin loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(to top,#9356dc,#b35cdc,#cf64dc,#e86edb, #ff79da );
+  background: linear-gradient(
+    to top,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
   width: 100%;
   height: 100%;
   font-family: $font-family1;
@@ -33,10 +40,12 @@
 }
 
 .gradient_text {
-  background-image: linear-gradient(to top,#8b46df,#7b16aa);
+  background-image: linear-gradient(to top, #8b46df, #7b16aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* TITLE H4 */
 
 @mixin h4 {
   font-family: $font-family3;
@@ -49,6 +58,8 @@
     font-size: 26px;
   }
 }
+
+/* FORM BUTTON */
 
 @mixin form_button($width, $bgc, $br, $bs) {
   display: flex;
@@ -74,6 +85,8 @@
   }
 }
 
+/* BTN IMAGE */
+
 @mixin btn_image($width, $height, $bgc, $br, $bs) {
   width: $width;
   height: $height;
@@ -91,10 +104,74 @@
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
   }
+  @media #{$media-up} {
+    height: 350px;
+    margin-bottom: 40px;
+  }
+
+  .btn_image__restaurant {
+    width: 100%;
+    height: 158px;
+
+    border-radius: 15px 15px 0 0;
+
+    object-fit: cover;
+
+    cursor: pointer;
+    @media #{$media-down} {
+      width: 100%;
+      height: 70%;
+    }
+  }
+
+  .btn_image__label {
+    padding-left: 10px;
+    padding-right: 15px;
+    .btn_image__label_1 {
+      font-family: $font-family3;
+      font-size: $font-size-label_1;
+      font-weight: 800;
+      @media #{$media-up} {
+        font-size: 22px;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .btn_image__logo {
+    position: absolute;
+    right: 10px;
+    bottom: 22px;
+    font-size: 28px;
+    .btn_image__star {
+      color: rgb(102, 102, 102);
+      font-size: 24px;
+      padding-right: 22px;
+      cursor: pointer;
+      @media #{$media-up} {
+        position: absolute;
+        right: 10px;
+        bottom: 22px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .btn_image__label_2 {
+    padding-top: 4px;
+    font-family: $font-family2;
+    color: gray;
+    font-size: 15px;
+    @media #{$media-up} {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+  }
 }
 
+/* BTN IMAGE STAR */
+
 @mixin btn_image__star {
-  padding-left: 15px;
   font-size: 25px;
   .btn_image__star::before {
     cursor: pointer;
@@ -110,6 +187,8 @@
     color: $color-secondary;
   }
 }
+
+/* SMALL BOX */
 
 @mixin small_box {
   position: relative;
@@ -188,6 +267,7 @@
   right: 0;
 }
 
+/* FOOTER */
 
 @mixin footer {
   bottom: 0;
@@ -205,7 +285,6 @@
   }
   @media #{$media-up} {
     height: auto;
-    margin-top: 100px;
   }
 
   .footer__box {
