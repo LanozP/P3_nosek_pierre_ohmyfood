@@ -349,30 +349,5 @@ h4 {
 /* FOOTER */
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  background-color: $background-color-footer;
-  a {
-    color: white;
-    text-decoration: none;
-
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-h5 {
-  font-size: 20px;
-  color: white;
-  font-family: $font-family1;
-
-  padding-left: 20px;
-}
-
-.footer__label_box {
-  display: flex;
-  flex-direction: row;
-  color: white;
-
-  padding-left: 15px;
+  @include footer;
 }

@@ -567,6 +567,9 @@ h4 {
 
 /* FOOTER */
 .footer {
+  bottom: 0;
+  width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
   background-color: #353535;
@@ -577,19 +580,65 @@ h4 {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-
-h5 {
-  font-size: 20px;
+@media only screen and (min-width: 1024px) {
+  .footer {
+    height: auto;
+    margin-top: 100px;
+  }
+}
+.footer .footer__box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+.footer .footer__title {
+  font-size: 18px;
   color: white;
   font-family: "Shrikhand";
   padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-
-.footer__label_box {
+@media only screen and (min-width: 1024px) {
+  .footer .footer__title {
+    font-size: 24px;
+  }
+}
+.footer .label_box {
   display: flex;
   flex-direction: row;
   color: white;
+  font-size: 13px;
+  font-family: "Roboto";
   padding-left: 15px;
+}
+.footer .label_box i {
+  width: 5%;
+}
+.footer .label_box .hand {
+  font-size: 14px;
+}
+@media only screen and (min-width: 1024px) {
+  .footer .label_box {
+    font-size: 16px;
+  }
+  .footer .label_box i {
+    width: 1%;
+  }
+}
+.footer .link {
+  font-size: 12px;
+  font-family: "Roboto";
+}
+@media only screen and (min-width: 1024px) {
+  .footer .link {
+    font-size: 15px;
+  }
+}
+.footer #label_contact {
+  font-family: "Roboto";
+  margin-bottom: 50px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

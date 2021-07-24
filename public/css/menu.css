@@ -251,7 +251,6 @@ body {
 /* HEADER */
 .bloc_page {
   position: relative;
-  padding-bottom: 200px;
   min-height: 100vh;
 }
 
@@ -432,7 +431,6 @@ body {
 
 /* FOOTER */
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 200px;
@@ -446,14 +444,18 @@ body {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-
-.footer__box {
+@media only screen and (min-width: 1024px) {
+  .footer {
+    height: auto;
+    margin-top: 100px;
+  }
+}
+.footer .footer__box {
   display: flex;
   flex-direction: column;
   padding-left: 8px;
 }
-
-.footer__title {
+.footer .footer__title {
   font-size: 18px;
   color: white;
   font-family: "Shrikhand";
@@ -462,12 +464,11 @@ body {
   margin-bottom: 15px;
 }
 @media only screen and (min-width: 1024px) {
-  .footer__title {
+  .footer .footer__title {
     font-size: 24px;
   }
 }
-
-.label_box {
+.footer .label_box {
   display: flex;
   flex-direction: row;
   color: white;
@@ -475,32 +476,30 @@ body {
   font-family: "Roboto";
   padding-left: 15px;
 }
-.label_box i {
+.footer .label_box i {
   width: 5%;
 }
-.label_box .hand {
+.footer .label_box .hand {
   font-size: 14px;
 }
 @media only screen and (min-width: 1024px) {
-  .label_box {
+  .footer .label_box {
     font-size: 16px;
   }
-  .label_box i {
+  .footer .label_box i {
     width: 1%;
   }
 }
-
-.link {
+.footer .link {
   font-size: 12px;
   font-family: "Roboto";
 }
 @media only screen and (min-width: 1024px) {
-  .link {
+  .footer .link {
     font-size: 15px;
   }
 }
-
-#label_contact {
+.footer #label_contact {
   font-family: "Roboto";
   margin-bottom: 50px;
   cursor: pointer;
