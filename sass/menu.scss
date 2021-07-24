@@ -13,6 +13,7 @@ body {
 @import "../sass/utils/mixins";
 @import "../sass/utils/media";
 @import "../sass/utils/loop";
+@import "../sass/utils/keyframes";
 
 @font-face {
   font-family: "Shrikhand";
@@ -149,7 +150,8 @@ body {
 .menu_part__label {
   font-family: $font-family2;
   color: rgba(22, 21, 21, 0.685);
-  padding-bottom: 4px;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
   @media #{$media-up} {
     font-size: 20px;
   }
