@@ -145,6 +145,7 @@
   .small_box__title {
     font-family: $font-family3;
     font-weight: 900;
+    font-size: 16px;
   }
   .small_box__option {
     display: flex;
@@ -152,6 +153,7 @@
     flex-direction: row;
     align-items: baseline;
     .small_box__label {
+      font-family: $font-family5;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
