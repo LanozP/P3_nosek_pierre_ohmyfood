@@ -127,42 +127,8 @@ body {
 }
 
 .title_label__button_explorer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45px;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: $font-family2;
-
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 30px;
-
-  border-radius: 25px;
-  box-shadow: $box-shadow;
-  border: 0px;
-
-  background-image: linear-gradient(
-    to top,
-    #9356dc,
-    #b35cdc,
-    #cf64dc,
-    #e86edb,
-    #ff79da
-  );
-  color: white;
-  transform: scale(1);
-
-  cursor: pointer;
-  &:hover {
-    box-shadow: $box-shadow-plus;
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-  }
-  @media #{$media-up} {
-    font-size: 18px;
-  }
+  @include button_explorer
 }
 
 h2 {
@@ -210,7 +176,7 @@ h2 {
   .form_button__logo {
     display: flex;
     align-items: center;
-    
+
     padding-left: 20px;
     i {
       color: gray;
@@ -223,10 +189,6 @@ h2 {
 
     font-size: 15px;
     font-weight: 800;
-
-    background: transparent;
-
-    border: transparent;
 
     padding-left: 20px;
   }
@@ -244,9 +206,6 @@ h2 {
 }
 
 .box__restaurants {
-  justify-content: center;
-  border-radius: $border-radius1;
-  padding-bottom: 50px;
   @media #{$media-up} {
     display: flex;
     flex-direction: row;
@@ -270,7 +229,7 @@ h2 {
 }
 
 .btn_image {
-  @include btn_image( $width: 85%, $height: 240px, $bgc: #f5f5f5, $br: $border-radius1, $bs: $box-shadow);
+  @include btn_image( $width: 85%, $height: 240px, $br: $border-radius1, $bs: $box-shadow);
   @include btn_image__star;
 
 }

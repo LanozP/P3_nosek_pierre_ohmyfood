@@ -40,12 +40,6 @@ body {
   src: url("../public/Police/Roboto-Bold.ttf");
 }
 
-/* LOADER */
-
-.loader {
-  @include loading;
-}
-
 /* HEADER */
 
 .bloc_page {
@@ -54,29 +48,22 @@ body {
 }
 
 .header__top {
-  position: relative;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   a {
     position: absolute;
     left: 20px;
+    top: 25px;
     font-size: 20px;
-    padding-top: 25px;
     cursor: pointer;
-    color: black;
   }
 }
 
 .header__title {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
 
   height: 70px;
-
-  border-bottom: 1px solid #c4bcbc;
   h1 {
     font-family: $font-family1;
     height: 40px;
@@ -95,14 +82,12 @@ body {
     overflow: hidden;
     height: 600px;
     background-size: cover;
-    background-position: center center;
   }
 }
 
 /* BLOC WITH ALL THE MENU */
 
 .menu {
-  width: 100%;
   padding-left: 18px;
   padding-right: 18px;
   background-color: #fff;
@@ -112,7 +97,6 @@ body {
 .menu__title {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: baseline;
   @media #{$media-up} {
     justify-content: center;
@@ -135,8 +119,6 @@ body {
 .menu_part {
   @media #{$media-up} {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -178,30 +160,8 @@ body {
   display: flex;
   justify-content: center;
   .order__btn {
-    height: 45px;
-    font-size: 14px;
-    margin-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 25px;
-    box-shadow: $box-shadow;
-    border: 0px;
-    background-image: linear-gradient(
-      to top,
-      #9356dc,
-      #b35cdc,
-      #cf64dc,
-      #e86edb,
-      #ff79da
-    );
-    color: white;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 0.2s ease-in-out;
-      box-shadow: $box-shadow-plus;
-    }
-
+    margin-bottom: 30px;
+    @include button_explorer;
     @media #{$media-up} {
       font-size: 20px;
       padding-left: 30px;
