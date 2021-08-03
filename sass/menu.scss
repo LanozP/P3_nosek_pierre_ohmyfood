@@ -8,7 +8,7 @@ body {
 * {
   box-sizing: border-box;
 }
-
+ 
 @import "../sass/utils/variables";
 @import "../sass/utils/mixins";
 @import "../sass/utils/media";
@@ -119,12 +119,15 @@ body {
   }
   .menu__label {
     font-family: $font-family1;
-    font-size: $font-size-H5;
+    font-size: 28px;
     margin-top: 0;
     padding-top: 20px;
     margin-bottom: 15px;
   }
   .menu__star {
+    @media #{$media-up} {
+      margin-left: 15px;
+    }
     @include btn_image__star;
   }
 }
@@ -149,8 +152,7 @@ body {
 .menu_part__label {
   font-family: $font-family2;
   color: rgba(22, 21, 21, 0.685);
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
+  margin-bottom: 25px;
   @media #{$media-up} {
     font-size: 20px;
   }
@@ -177,18 +179,13 @@ body {
   justify-content: center;
   .order__btn {
     height: 45px;
-
     font-size: 14px;
-
     margin-bottom: 50px;
-
     padding-left: 20px;
     padding-right: 20px;
-
     border-radius: 25px;
     box-shadow: $box-shadow;
     border: 0px;
-
     background-image: linear-gradient(
       to top,
       #9356dc,
@@ -198,7 +195,6 @@ body {
       #ff79da
     );
     color: white;
-
     cursor: pointer;
     &:hover {
       transform: scale(1.05);
@@ -219,5 +215,3 @@ body {
 .footer {
   @include footer;
 }
-
-
