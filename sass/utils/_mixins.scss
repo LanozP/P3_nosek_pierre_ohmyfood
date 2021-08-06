@@ -1,11 +1,10 @@
-
 // LOADER
 
 @mixin loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient( 
+  background: linear-gradient(
     to top,
     #9356dc,
     #b35cdc,
@@ -39,7 +38,7 @@
   }
 }
 
-.gradient_text {  
+.gradient_text {
   background-image: linear-gradient(to top, #8b46df, #7b16aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -199,23 +198,40 @@
 
 // BTN IMAGE STAR - ANIMATION
 
+@keyframes coeurBg {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgba(147, 86, 220, 1);
+  }
+}
+
 @mixin btn_image__star {
   font-size: 25px;
+
+  .btn_image__star {
+    width: 40px;
+  }
   .btn_image__star::before {
+    display: block;
+    width: 27px;
     cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
   }
 
   .btn_image__star:hover::before {
     font-weight: bold;
-    color: $color-secondary;
-    transition: 300ms linear;
-  }
-
-  .btn_image__star.active {
-    color: $color-secondary;
+    background-image: linear-gradient(
+      rgba(255, 121, 218, 1),
+      rgba(255, 255, 255, 0)
+    );
+    animation: coeurBg 1s ease;
+    -webkit-animation-fill-mode: forwards;
   }
 }
-
 
 // MENU
 
@@ -230,6 +246,12 @@
   margin-bottom: 15px;
   &:hover {
     box-shadow: $box-shadow-plus;
+  }
+  &:hover .small_box {
+    opacity: 1;
+  }
+  &:hover .fa-check-circle {
+    transform: rotate(360deg);
   }
 }
 
@@ -252,7 +274,7 @@
     justify-content: space-between;
     align-items: baseline;
     .small_box__label {
-      font-family: $font-family5;
+      font-family: $font-family2;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -275,18 +297,21 @@
   width: 15%;
   height: 60px;
   font-size: 20px;
-  transition: right 0.4s ease-in-out;
+  right: 0px;
+  margin-right: -66px;
+  transition: margin-right 0.4s ease-in-out;
   i {
+    font-size: 26px;
     color: #fff;
+    transition: transform 500ms ease-in-out;
   }
 }
 
+.small_box:hover .small_box__b {
+  margin-right: 0;
+}
 .small_box:hover .small_box__a {
   width: 85%;
-}
-
-.small_box:hover .small_box__b {
-  right: 0;
 }
 
 // FOOTER
@@ -307,7 +332,7 @@
 
   .footer__box {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     padding-left: 8px;
   }
 

@@ -14,6 +14,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes coeurBg {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #9356dc;
+  }
+}
 .small_box__a {
   position: absolute;
   z-index: 2;
@@ -35,7 +43,7 @@ body {
   align-items: baseline;
 }
 .small_box__a .small_box__option .small_box__label {
-  font-family: "Roboto-Bold";
+  font-family: "Roboto";
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -56,18 +64,22 @@ body {
   width: 15%;
   height: 60px;
   font-size: 20px;
-  transition: right 0.4s ease-in-out;
+  right: 0px;
+  margin-right: -66px;
+  transition: margin-right 0.4s ease-in-out;
 }
 .small_box__b i {
+  font-size: 26px;
   color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+
+.small_box:hover .small_box__b {
+  margin-right: 0;
 }
 
 .small_box:hover .small_box__a {
   width: 85%;
-}
-
-.small_box:hover .small_box__b {
-  right: 0;
 }
 
 #image_background_1 {
@@ -204,6 +216,11 @@ body {
   font-family: "Roboto-Bold";
   src: url("../public/Police/Roboto-Bold.ttf");
 }
+.bloc_page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .loader {
   display: flex;
   justify-content: center;
@@ -318,7 +335,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
-  box-shadow: 0px 2px 10px 1px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4a8;
   border: 0px;
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   color: white;
@@ -326,7 +343,7 @@ body {
   cursor: pointer;
 }
 .title_label__button_explorer:hover {
-  box-shadow: 3px 7px 6px 0px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
@@ -374,12 +391,12 @@ h2 {
   margin-left: 35px;
   margin-bottom: 15px;
   border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 2px 10px 1px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4a8;
   background-color: #f6f6f6;
   cursor: pointer;
 }
 .form_button:hover {
-  box-shadow: 3px 7px 6px 0px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4;
   background-color: #f4ebfe;
 }
 .form_button .form_button__number {
@@ -459,7 +476,7 @@ h2 {
   height: 240px;
   margin-bottom: 15px;
   border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 2px 10px 1px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4a8;
   transform: scale(1);
   font-size: 25px;
 }
@@ -468,7 +485,7 @@ h2 {
   color: black;
 }
 .btn_image:hover {
-  box-shadow: 3px 7px 6px 0px #c4c4c4;
+  box-shadow: 0px 2px 10px 1px #c4c4c4;
   transform: scale(1.02);
   transition: transform 0.3s ease-in-out;
 }
@@ -533,16 +550,22 @@ h2 {
     padding-top: 10px;
   }
 }
+.btn_image .btn_image__star {
+  width: 40px;
+}
 .btn_image .btn_image__star::before {
+  display: block;
+  width: 27px;
   cursor: pointer;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: black;
 }
 .btn_image .btn_image__star:hover::before {
   font-weight: bold;
-  color: #ff79da;
-  transition: 300ms linear;
-}
-.btn_image .btn_image__star.active {
-  color: #ff79da;
+  background-image: linear-gradient(#ff79da, rgba(255, 255, 255, 0));
+  animation: coeurBg 1s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .footer {
