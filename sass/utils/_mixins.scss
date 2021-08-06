@@ -1,12 +1,11 @@
-// STYLE
 
-/* LOADER */
+// LOADER
 
 @mixin loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
+  background: linear-gradient( 
     to top,
     #9356dc,
     #b35cdc,
@@ -46,7 +45,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* TITLE H2 */
+// TITLE H2
 
 @mixin h2 {
   font-family: $font-family3;
@@ -60,7 +59,7 @@
   }
 }
 
-/* BUTTON EXPLORER */
+// BUTTON EXPLORER
 
 @mixin button_explorer {
   display: flex;
@@ -97,7 +96,7 @@
   }
 }
 
-/* FORM BUTTON */
+// FORM BUTTON
 
 @mixin form_button($width, $bgc, $br, $bs) {
   display: flex;
@@ -123,7 +122,7 @@
   }
 }
 
-/* BTN IMAGE */
+// BTN IMAGE
 
 @mixin btn_image($width, $height, $br, $bs) {
   width: $width;
@@ -198,7 +197,7 @@
   }
 }
 
-/* BTN IMAGE STAR - ANIMATION */
+// BTN IMAGE STAR - ANIMATION
 
 @mixin btn_image__star {
   font-size: 25px;
@@ -220,7 +219,7 @@
 
 // MENU
 
-/* SMALL BOX */
+// SMALL BOX
 
 @mixin small_box {
   position: relative;
@@ -290,7 +289,7 @@
   right: 0;
 }
 
-/* FOOTER */
+// FOOTER
 
 @mixin footer {
   height: 200px;

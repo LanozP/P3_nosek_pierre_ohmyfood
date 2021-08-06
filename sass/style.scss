@@ -10,7 +10,7 @@ body {
 
 @import "../sass/utils/variables";
 @import "../sass/utils/mixins";
-@import "../sass/utils/media";
+@import "../sass/utils/media"; 
 @import "../sass/utils/loop";
 @import "../sass/utils/keyframes";
 
@@ -39,13 +39,13 @@ body {
   src: url("../public/Police/Roboto-Bold.ttf");
 }
 
-/* LOADER */
+// LOADER
 
 .loader {
   @include loading;  
 }
 
-/* HEADER */
+// HEADER
 
 .box_title {
   display: flex;
@@ -63,7 +63,7 @@ body {
   }
 }
 
-/* PLACE SEARCH BOX */
+// PLACE SEARCH BOX
 
 .search_box {
   display: flex;
@@ -89,7 +89,7 @@ body {
   }
 }
 
-/* TITLE + BTN EXPLORER */
+// TITLE + BTN EXPLORER
 
 .title_label {
   display: flex;
@@ -135,7 +135,7 @@ h2 {
   @include h2;
 }
 
-/* NAVIGATION */
+// NAVIGATION
 
 .nav {
   margin-bottom: 60px;
@@ -198,7 +198,7 @@ h2 {
   }
 }
 
-/* BOX RESTAURANTS */
+// BOX RESTAURANTS
 
 .box {
   background-color: rgb(246, 246, 246);
@@ -234,7 +234,7 @@ h2 {
 
 }
 
-/* FOOTER */
+// FOOTER
 
 .footer {
   @include footer;
